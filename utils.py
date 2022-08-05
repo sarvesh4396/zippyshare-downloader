@@ -90,7 +90,7 @@ def get_download_url(url, soup):
     )
 
 
-def get_download_links_button(url):
+def get_download_btn_template(url):
     name = basename(url)
     template = """<a href="{}" target="_blank" rel="noopener noreferrer" class="text-blue-500 underline hover:text-rose-500 duration-300">
           {} 

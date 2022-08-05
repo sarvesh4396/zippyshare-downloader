@@ -4,7 +4,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 import requests
 
-from utils import get_download_links_button, get_download_url, get_urls
+from utils import get_download_btn_template, get_download_url, get_urls
 
 
 app = FastAPI()
@@ -49,7 +49,7 @@ def download(request: Request, urls: str = Form(...)):
 
         final_text += f"{len(download_urls)} Downloadable Urls Found<br>"
 
-    links = "<br>".join([get_download_links_button(u) for u in download_urls])
+    links = "<br>".join([get_download_btn_template(u) for u in download_urls])
     return templates.TemplateResponse(
         "index.html",
         context={"request": request, "final_text": final_text, "links": links},
