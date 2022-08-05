@@ -2,7 +2,7 @@ from fastapi import FastAPI, Request, Form
 from bs4 import BeautifulSoup
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
-import requests
+import requests,uvicorn
 
 from utils import get_download_btn_template, get_download_url, get_urls
 
@@ -54,3 +54,6 @@ def download(request: Request, urls: str = Form(...)):
         "index.html",
         context={"request": request, "final_text": final_text, "links": links},
     )
+
+if __name__ == "__main__":
+    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
