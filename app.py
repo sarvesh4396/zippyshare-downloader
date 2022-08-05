@@ -1,10 +1,10 @@
-from fastapi import FastAPI, Request, Form
+
 from bs4 import BeautifulSoup
+from fastapi import FastAPI, Request, Form
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
-import requests,uvicorn
-
 from utils import get_download_btn_template, get_download_url, get_urls
+import requests
 
 
 app = FastAPI()

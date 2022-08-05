@@ -1,6 +1,6 @@
+from os.path import basename
 import math
 import re
-from os.path import basename
 
 # Taken from https://github.com/mansuf/zippyshare-downloader.git
 REGEXS_ZIPPYSHARE_URL = [
