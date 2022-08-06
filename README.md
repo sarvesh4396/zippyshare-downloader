@@ -1,8 +1,6 @@
 # ZippyShare Downloader
 
-This is a simple web-app that calculates the length of a YouTube playlist.
-
-It also shows the length of a playlist at increased speeds of 1.25x, 1.50x, 1.75x and 2x.
+This is a simple web-app that downloads files from zippyshare in bulk provided links.
 
 It is built with [FastApi](https://fastapi.tiangolo.com/) and deployed on [Vercel](https://vercel.com/)
 
